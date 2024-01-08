@@ -1,0 +1,94 @@
+* {
+	box-sizing: border-box;
+}
+
+:root {
+	font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+	background-color: #242424;
+	display: flex;
+	width: 100%;
+	height: 100%;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+
+body {
+	margin: 0;
+	display: flex;
+	width: 100%;
+	height: 100%;
+	align-items: center;
+	justify-content: center;
+}
+
+button {
+	border-radius: 8px;
+	border: 1px solid transparent;
+	padding: 0.6em 1.2em;
+	font-size: 1em;
+	font-weight: 500;
+	font-family: inherit;
+	background-color: #fff;
+	color: #000;
+	cursor: pointer;
+	transition: border-color 0.25s;
+	margin: 10px;
+}
+button:hover {
+	border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+	outline: 4px auto -webkit-focus-ring-color;
+}
+
+.scene {
+	perspective: 600px;
+	width: 300px;
+	height: 300px;
+	margin: 50px;
+}
+
+.cube {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	transform-style: preserve-3d;
+	transition: transform 1s ease-in-out;
+}
+
+.cube__face {
+	position: absolute;
+	width: 300px;
+	height: 300px;
+	color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 24px;
+	user-select: none;
+}
+
+.cube__face > img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	pointer-events: none;
+}
+
+.cube__face--1 {
+	transform: rotateY(0deg) translateZ(150px);
+}
+
+.cube__face--2 {
+	transform: rotateY(90deg) translateZ(150px);
+}
+
+.cube__face--3 {
+	transform: rotateY(180deg) translateZ(150px);
+}
+
+.cube__face--4 {
+	transform: rotateY(270deg) translateZ(150px);
+}
